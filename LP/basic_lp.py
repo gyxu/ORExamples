@@ -43,3 +43,43 @@ def homework_1_3_2():
     result = optimize.linprog(c, A_ub=-A, b_ub=-b, bounds=(x0_bound, x1_bound))
     print(result)
 
+
+def homework_2_1_1():
+    c = np.array([1, 1, 1])
+    A = np.array([[-1, 0, -2], [2, -3, 1], [2, -5, 6]])
+    b = np.array([5, 3, 5])
+
+    result = optimize.linprog(-c, A_ub=A, b_ub=b)
+    print(result)
+
+
+def homework_2_1_2():
+    c = np.array([-1, -3, -3, 0, 0, 0])
+    A = np.array([[3, 1, 2, 0, 1, 0], [1, 0, 1, 0, 2, 1], [1, 0, 2, 1, 2, 0]])
+    b = np.array([5, 2, 6])
+
+    result = optimize.linprog(c, A_eq=A, b_eq=b)
+    print(result)
+
+
+def homework_2_2_1():
+    c = np.array([1, -1, 1])
+    A = np.array([[1, 2, 3], [4, 5, -6]])
+    b = np.array([6, 6])
+
+    result = optimize.linprog(c, A_eq=A, b_eq=b)
+    print(result)
+
+
+def homework_2_2_2():
+    c = np.array([1, 1])
+    A = np.array([[1, 1], [1, -1]])
+    b = np.array([1, 0])
+
+    result = optimize.linprog(-c, A_ub=-A, b_ub=-b)
+    print(result)
+
+
+
+
+
